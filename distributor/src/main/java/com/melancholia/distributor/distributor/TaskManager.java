@@ -85,7 +85,7 @@ public class TaskManager {
 
     public void taskRedistribution(List<WorkerDTO> worker) {
         if (tasks.isEmpty()) return;
-        log.info("Task redistribution started");
+
         List<String> workersAddresses = worker.stream()
                 .map(WorkerDTO::fullAddress).toList();
 
