@@ -153,8 +153,9 @@ public class DistributorService {
         taskManager.reset();
         resetAllWorkers()
                 .subscribe(
-                        response -> log.info("All workers reset successfully"),
-                        error -> log.error("Failed to reset workers", error)
+                        null,
+                        error -> log.error("Failed to reset workers", error),
+                        () -> log.info("All workers reset successfully")
                 );
         log.info("Global task was completed!");
     }
