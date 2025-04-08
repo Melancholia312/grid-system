@@ -66,14 +66,5 @@ public class TaskDTO {
     public int hashCode() {
         return Objects.hash(start, count);
     }
-
-    @Override
-    public String toString() {
-        return "TaskDTO{" +
-                "start='" + start + '\'' +
-                ", count='" + count + '\'' +
-                ", callbackUrl='" + callbackUrl + '\'' +
-                ", worker='" + worker + '\'' +
-                '}';
-    }
+    
 }
