@@ -36,13 +36,13 @@ public class ManagerService {
     private static final Logger log = LoggerFactory.getLogger(HttpSenderService.class);
 
     public void registerWorker(WorkerDTO worker){
-        log.info("Added new worker {}:{}. Remaining workers: {}", worker.getHost(), worker.getPort(), workerList.size());
         workerList.add(worker);
+        log.info("Added new worker {}:{}. Remaining workers: {}", worker.getHost(), worker.getPort(), workerList.size());
     }
 
     public void leaveWorker(WorkerDTO worker) {
-        log.info("Worker leaved {}:{}. Remaining workers: {}", worker.getHost(), worker.getPort(), workerList.size());
         workerList.remove(worker);
+        log.info("Worker leaved {}:{}. Remaining workers: {}", worker.getHost(), worker.getPort(), workerList.size());
     }
 
     public Set<WorkerDTO> getWorkers(){
