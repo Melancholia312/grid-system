@@ -1,0 +1,8 @@
+{
+  "className": "org.example.DistributorTask",
+  "annotationEndName": "org.example.End",
+  "annotationProcessName": "org.example.Process",
+  "data": {
+    "passwordLength": 20
+  }
+}
