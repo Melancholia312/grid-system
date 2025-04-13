@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -37,6 +38,7 @@ public class WorkerService {
     private static final Logger log = LoggerFactory.getLogger(ApplicationStartup.class);
     private static final ObjectMapper mapper = new ObjectMapper();
 
+    @Async
     public void solve(TaskDTO taskDTO) {
         workerStateService.setWorkerStatusEnum(WorkerStatusEnum.WORKING);
         ObjectNode result = (ObjectNode) solverService.solve(taskDTO);
