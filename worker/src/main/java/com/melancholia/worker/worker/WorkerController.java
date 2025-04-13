@@ -83,7 +83,7 @@ public class WorkerController {
         workerService.solve(taskDTO);
 
         ApiResponse response = new ApiResponse("Task received", HttpStatus.OK.value(), null);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/check-state")
