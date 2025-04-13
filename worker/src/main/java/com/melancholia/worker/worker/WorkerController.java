@@ -82,7 +82,7 @@ public class WorkerController {
         log.info("Received task: {}:{}", taskDTO.getStart(), taskDTO.getCount());
         workerService.solve(taskDTO);
 
-        ApiResponse response = new ApiResponse("Task received", HttpStatus.OK.value(), null);
+        ApiResponse response = new ApiResponse("Task received", HttpStatus.ACCEPTED.value(), null);
         return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
     }
 
